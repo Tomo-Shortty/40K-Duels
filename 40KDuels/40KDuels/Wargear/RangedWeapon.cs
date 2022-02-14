@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _40KDuels.Weapons
+namespace _40KDuels.Wargear
 {
     internal class RangedWeapon : IWeapon
     {
