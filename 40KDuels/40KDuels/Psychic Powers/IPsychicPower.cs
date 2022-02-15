@@ -15,7 +15,7 @@ namespace _40KDuels.Psychic_Powers
         public int Range { get; set; }
         public int WarpCharge { get; set; }
 
-        public bool CastPsychicPower(IUnit unit);
-        public bool DealDamage(IModel model);
+        public void UsePower(IModel caster, IUnit target);
+        public void DealDamage(IModel target);
     }
 }

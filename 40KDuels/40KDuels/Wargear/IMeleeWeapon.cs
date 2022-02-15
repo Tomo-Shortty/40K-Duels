@@ -1,4 +1,5 @@
 ﻿using _40KDuels.Enums;
+using _40KDuels.Units;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,8 @@ namespace _40KDuels.Wargear
         public int Damage { get; set; }
         public DamageType DamageType { get; set; }
         public List<SpecialWeaponProperty> SpecialProperties { get; set; }
+
+        public void Attack(IModel fighter, IUnit target);
+        public void DealDamage(IModel target);
     }
 }

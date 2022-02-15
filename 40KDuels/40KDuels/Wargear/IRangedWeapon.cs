@@ -20,6 +20,7 @@ namespace _40KDuels.Wargear
         public DamageType DamageType { get; set; }
         public List<SpecialWeaponProperty> SpecialProperties { get; set; }
 
-        public bool DealDamage(IModel enemy);
+        public void Attack(IModel shooter, IUnit target);
+        public void DealDamage(IModel target);
     }
 }
