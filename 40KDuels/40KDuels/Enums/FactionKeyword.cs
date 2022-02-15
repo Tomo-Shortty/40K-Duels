@@ -9,7 +9,11 @@ namespace _40KDuels.Enums
     internal enum FactionKeyword
     {
         Imperium,
+        AdeptusAstartes,
+        AstraMilitarum,
         Chaos,
+        HereticAstartes,
+        DeathGuard,
         Aeldari,
         Orks,
         Necrons,
