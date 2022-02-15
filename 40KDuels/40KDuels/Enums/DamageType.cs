@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace _40KDuels.Enums
 {
-    internal enum SpecialWeaponType
+    internal enum DamageType
     {
-        Bolt,
-        Plague
+        Normal,
+        MortalWound
     }
 }

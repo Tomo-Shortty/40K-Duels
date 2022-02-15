@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Folder Include="Game\" />
+    <Folder Include="Psychic Powers\" />
     <Folder Include="Units\" />
   </ItemGroup>
 

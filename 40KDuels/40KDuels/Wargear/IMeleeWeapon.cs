@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace _40KDuels.Wargear
 {
-    internal interface IWeapon
+    internal interface IMeleeWeapon
     {
         public string Name { get; set; }
-        public int Range { get; set; }
-        public WeaponType Type { get; set; }
         public int Strength { get; set; }
         public int ArmourPenetration { get; set; }
         public int Damage { get; set; }
+        public DamageType DamageType { get; set; }
+        public List<SpecialWeaponProperty> SpecialProperties { get; set; }
     }
 }
