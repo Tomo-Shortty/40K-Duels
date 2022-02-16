@@ -10,8 +10,10 @@
 
   <ItemGroup>
     <Folder Include="Game\" />
-    <Folder Include="Psychic Powers\" />
-    <Folder Include="Units\" />
+    <Folder Include="Psychic Powers\Death Guard\" />
+    <Folder Include="Units\Death Guard\" />
+    <Folder Include="Wargear\Melee Weapons\" />
+    <Folder Include="Wargear\Ranged Weapons\" />
   </ItemGroup>
 
 </Project>

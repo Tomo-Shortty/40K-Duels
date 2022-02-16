@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace _40KDuels.Wargear
 {
-    internal interface IRangedWeapon
+    internal interface IWeapon
     {
         public string Name { get; set; }
         public int Range { get; set; }
@@ -19,8 +19,11 @@ namespace _40KDuels.Wargear
         public int Damage { get; set; }
         public DamageType DamageType { get; set; }
         public List<SpecialWeaponProperty> SpecialProperties { get; set; }
+        public Random DiceRoll { get; set; }
 
-        public void Attack(IModel shooter, IUnit target);
-        public void DealDamage(IModel target);
+        public void UseWeapon();
+        public void MakeHitRoll(Model model, IUnit target);
+        public void MakeWoundRoll(Model model, IUnit target);
+        public void MakeSavingThrow(IUnit target);
     }
 }
