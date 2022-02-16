@@ -35,8 +35,9 @@ namespace _40KDuels.Units
         public bool ChargedThisTurn { get; set; }
         public int CasualtiesThisTurn { get; set; }
 
-        public void LoadModels(Model[] models);
-        //public void ReplaceModelWargear();
+        public void LoadModels();
+        public void AddModel(Model model);
+        public void ReplaceModelWargear(Model model);
         //public void ReceiveDamage(int damage, DamageType damageType);
 
         /*public void Command();

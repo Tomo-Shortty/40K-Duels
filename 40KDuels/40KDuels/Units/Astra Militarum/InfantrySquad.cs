@@ -7,22 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _40KDuels.Units.Death_Guard
+namespace _40KDuels.Units.Astra_Militarum
 {
-    internal class PlagueMarines : IUnit
+    internal class InfantrySquad : IUnit
     {
-        public PlagueMarines()
+        public InfantrySquad()
         {
-            Name = "Plague Marines";
-            PowerRating = 6;
+            Name = "Infantry Squad";
+            PowerRating = 3;
             Models = new List<Model>();
             LoadModels();
             NumberOfModels = Models.Count;
-            MinimumNumberOfModels = 5;
+            MinimumNumberOfModels = 10;
             MaximumNumberOfModels = 10;
             WargearOptions = new List<Weapon>();
-            FactionKeywords = new List<FactionKeyword>(new FactionKeyword[] {FactionKeyword.Chaos, FactionKeyword.Nurgle, FactionKeyword.HereticAstartes,
-            FactionKeyword.DeathGuard});
+            FactionKeywords = new List<FactionKeyword>(new FactionKeyword[] {FactionKeyword.Imperium, FactionKeyword.AstraMilitarum});
             Keywords = new List<Keyword>(new Keyword[] {Keyword.Infantry});
             Auras = new List<IAura>();
             InEngagementRange = false;
@@ -33,7 +32,7 @@ namespace _40KDuels.Units.Death_Guard
             StrengthCannotBeModified = false;
             ToughnessCannotBeModified = false;
             AttacksCannotBeModified = false;
-            LeadershipCannotBeModified = true;
+            LeadershipCannotBeModified = false;
             MovedThisTurn = false;
             AdvancedThisTurn = false;
             ChargedThisTurn = false;
@@ -66,7 +65,7 @@ namespace _40KDuels.Units.Death_Guard
 
         public void AddModel(Model model)
         {
-            throw new NotImplementedException();
+            Models.Add(model);
         }
 
         public void LoadModels()
