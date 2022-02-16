@@ -34,8 +34,10 @@ namespace _40KDuels.Units
         public bool CompletedFightPhase { get; set; }
         public bool CompletedMoralePhase { get; set; }
 
-        public void LoadModels();
-        public void ReplaceModelWargear();
+        public void LoadModels(Model[] models);
+        public void ReplaceModelWargear();       
+        public void ReceiveDamage(int damage, DamageType damageType);
+
         /*public void Command();
         public int Move();
         public bool CastPsyhcicPower();
@@ -44,8 +46,5 @@ namespace _40KDuels.Units
         public int Charge(IUnit target);
         public void Fight(IUnit target);
         public void MakeMoraleTest();*/
-        public void ReceiveDamage(int damage, DamageType damageType);
-        public bool CheckIfInAura();
-        public void ApplyAura(IUnit target);
     }
 }

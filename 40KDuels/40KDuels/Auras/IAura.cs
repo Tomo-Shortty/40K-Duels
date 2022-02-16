@@ -12,6 +12,6 @@ namespace _40KDuels.Auras
         public string Name { get; set; }
         public int Size { get; set; }
 
-        public void AuraEffect(IUnit unit);
+        public void ApplyAura(IUnit unit);
     }
 }
