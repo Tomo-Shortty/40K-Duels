@@ -14,7 +14,6 @@ namespace _40KDuels.Psychic_Powers
         public PsychicPowerType Type { get; set; }
         public int Range { get; set; }
         public int WarpCharge { get; set; }
-        public Random DiceRoll { get; set; }
 
         public void MakePsychicTest(Model model);
         public void UsePower();

@@ -9,6 +9,8 @@ namespace _40KDuels.Enums
     internal enum SpecialWeaponProperty
     {
         Blast,
+        Spray,
+        Unwieldy,
         Bolt,        
         Plague
     }

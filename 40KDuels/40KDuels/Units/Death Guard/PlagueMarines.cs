@@ -7,10 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _40KDuels.Units
+namespace _40KDuels.Units.Death_Guard
 {
-    internal interface IUnit
+    internal class PlagueMarines : IUnit
     {
+        public PlagueMarines(Model[] models)
+        {
+            Name = "Plague Marines";
+            PowerRating = 6;
+            Models = new List<Model>();
+            LoadModels(models);
+            NumberOfModels = Models.Count;
+            MinimumNumberOfModels = 5;
+            MaximumNumberOfModels = 10;
+            WargearOptions = new List<Weapon>();
+            FactionKeywords = new List<FactionKeyword>(new FactionKeyword[] {FactionKeyword.Chaos, FactionKeyword.Nurgle, FactionKeyword.HereticAstartes,
+            FactionKeyword.DeathGuard});
+            Keywords = new List<Keyword>(new Keyword[] {Keyword.Infantry});
+            Auras = new List<IAura>();
+            InEngagementRange = false;
+            HasDeploymentAbility = false;
+            MovementCannotBeModified = false;
+            WeaponSkillCannotBeModified = false;
+            BallisticSkillCannotBeModified = false;
+            StrengthCannotBeModified = false;
+            ToughnessCannotBeModified = false;
+            AttacksCannotBeModified = false;
+            LeadershipCannotBeModified = true;
+            MovedThisTurn = false;
+            AdvancedThisTurn = false;
+            ChargedThisTurn = false;
+            CasualtiesThisTurn = 0;
+        }
+
         public string Name { get; set; }
         public int PowerRating { get; set; }
         public List<Model> Models { get; set; }
@@ -35,17 +64,9 @@ namespace _40KDuels.Units
         public bool ChargedThisTurn { get; set; }
         public int CasualtiesThisTurn { get; set; }
 
-        public void LoadModels(Model[] models);
-        //public void ReplaceModelWargear();
-        //public void ReceiveDamage(int damage, DamageType damageType);
-
-        /*public void Command();
-        public int Move();
-        public bool CastPsyhcicPower();
-        public bool DenyTheWitch();
-        public void Shoot(IUnit target);
-        public int Charge(IUnit target);
-        public void Fight(IUnit target);
-        public void MakeMoraleTest();*/
+        public void LoadModels(Model[] models)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
