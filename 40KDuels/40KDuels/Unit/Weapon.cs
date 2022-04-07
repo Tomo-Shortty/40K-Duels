@@ -1,12 +1,11 @@
 ﻿using _40KDuels.Enums;
-using _40KDuels.Units;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _40KDuels.Wargear
+namespace _40KDuels.Unit
 {
     internal class Weapon
     {
@@ -50,11 +49,5 @@ namespace _40KDuels.Wargear
                 _specialProperties.Add(properties[i]);
             }
         }
-
-        /*public void UseWeapon();
-        public bool MakeHitRoll(Model model, Model target);
-        public bool MakeWoundRoll(Model model, Model target);
-        public bool MakeSavingThrow(Model target);
-        public int DetermineWoundRequirement(int toughness);*/
     }
 }

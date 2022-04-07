@@ -1,12 +1,10 @@
-﻿using _40KDuels.Psychic_Powers;
-using _40KDuels.Wargear;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _40KDuels.Units
+namespace _40KDuels.Unit
 {
     internal class Model
     {
@@ -100,14 +98,20 @@ namespace _40KDuels.Units
         public bool Slain => _slain;
         public bool Fled => _fled;
 
-        public Weapon SelectWeapon(Weapon weapon)
+        public Weapon SwitchWeapon(Weapon oldWeapon, Weapon newWeapon)
         {
-            if (weapon.SpecialProperties.Contains(Enums.SpecialWeaponProperty.Unwieldy))
+            if (newWeapon.SpecialProperties.Contains(Enums.SpecialWeaponProperty.Unwieldy) && 
+                !oldWeapon.SpecialProperties.Contains(Enums.SpecialWeaponProperty.Unwieldy))
             {
-                _toHitModifier += -1;
+                _toHitModifier -= 1;
+            }
+            else if (oldWeapon.SpecialProperties.Contains(Enums.SpecialWeaponProperty.Unwieldy) &&
+                !newWeapon.SpecialProperties.Contains(Enums.SpecialWeaponProperty.Unwieldy))
+            {
+                _toHitModifier += 1;
             }
 
-            return weapon;
+            return newWeapon;
         }
 
         public void ResetModifiers()
@@ -125,20 +129,5 @@ namespace _40KDuels.Units
             _attacksModifier = 0;
             _leadershipModifier = 0;
         }
-
-        /*public void CastPsychicPower(IPsychicPower psychicPower, IUnit target)
-        {
-
-        }
-        
-        public void FireRangedWeapon(IWeapon weapon, IUnit target)
-        {
-
-        }
-
-        public void UseMeleeWeapon(IWeapon weapon, IUnit target)
-        {
-
-        }*/
     }
 }
