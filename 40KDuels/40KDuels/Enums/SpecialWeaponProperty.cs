@@ -12,6 +12,7 @@ namespace _40KDuels.Enums
         Spray,
         Unwieldy,
         Bolt,        
-        Plague
+        Plague,
+        GetsHot
     }
 }
